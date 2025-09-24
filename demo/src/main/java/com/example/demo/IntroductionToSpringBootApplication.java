@@ -12,13 +12,19 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
 	@Autowired
 	Apple obj;
 
+	@Autowired
+	DBService dbService;
+
 	public static void main(String[] args) {
 		SpringApplication.run(IntroductionToSpringBootApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		obj.eatApple();
+
+		System.out.println(dbService.getData());
+
+//		obj.eatApple();
 	}
 
 }
